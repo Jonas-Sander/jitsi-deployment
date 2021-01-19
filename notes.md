@@ -31,5 +31,8 @@ nodeSelector:
 kubectl get all -n jitsi
 
 
+kustomize build . | kubectl apply -f -
+kustomize build . | kubectl delete -f -
+
 kubectl patch statefulsets shard-1-jvb -n jitsi -p '{"metadata":{"finalizers":null}}'
 kubectl patch statefulsets shard-0-jvb -n jitsi -p '{"metadata":{"finalizers":null}}'

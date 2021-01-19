@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - jitsi.messenger.schule
+    - jitsi.sharezone.net
     secretName: jitsi-messenger-schule-tls
   rules:
-    - host: jitsi.messenger.schule
+    - host: jitsi.sharezone.net
       http:
         paths:
         # only match /grafana and paths under /grafana/

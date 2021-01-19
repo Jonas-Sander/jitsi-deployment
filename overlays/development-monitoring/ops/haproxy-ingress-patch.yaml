@@ -3,13 +3,15 @@ kind: Ingress
 metadata:
   name: haproxy-ingress
   namespace: jitsi
+  annotations:
+    kubernetes.io/ingress.class: "haproxy"
 spec:
   tls:
   - hosts:
-    - jitsi.staging.messenger.schule
+    - jitsi.staging.sharezone.net
     secretName: jitsi-messenger-schule-tls
   rules:
-    - host: jitsi.staging.messenger.schule
+    - host: jitsi.staging.sharezone.net
       http:
         paths:
           - path: /

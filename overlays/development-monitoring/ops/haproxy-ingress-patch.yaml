@@ -3,8 +3,8 @@ kind: Ingress
 metadata:
   name: haproxy-ingress
   namespace: jitsi
-  # annotations:
-  #   kubernetes.io/ingress.class: "haproxy"
+  annotations:
+    kubernetes.io/ingress.class: "haproxy"
 spec:
   tls:
   - hosts:
@@ -17,4 +17,5 @@ spec:
           - path: /
             backend:
               serviceName: haproxy
+              servicePort: haproxy-http
               servicePort: 80

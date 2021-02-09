@@ -8,6 +8,8 @@ spec:
   selector:
     k8s-app: haproxy
   ports:
-    - name: "http"
+    # - name: "http"
+    - name: haproxy-http
       port: 80
-  type: ClusterIP
+  # type: ClusterIP
+  type: NodePort
